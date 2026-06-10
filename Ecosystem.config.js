@@ -17,6 +17,7 @@ module.exports = {
       autorestart: true,
       max_restarts: 5,
       restart_delay: 3000,
+      kill_timeout: 5000
     },
     {
       name: "welcome-tool",
@@ -30,6 +31,7 @@ module.exports = {
       autorestart: true,
       max_restarts: 5,
       restart_delay: 3000,
+      kill_timeout: 5000
     },
     {
       name: "example-tool",
@@ -43,6 +45,7 @@ module.exports = {
       autorestart: true,
       max_restarts: 5,
       restart_delay: 3000,
+      kill_timeout: 5000
     },
     {
       name: "rainbow-tool",
@@ -56,6 +59,7 @@ module.exports = {
       autorestart: true,
       max_restarts: 5,
       restart_delay: 3000,
+      kill_timeout: 5000
     },
   ],
 };
