@@ -1,7 +1,7 @@
 # ─────────────────────────────────────────────
 # Multi-repo Node.js container managed by pm2
 # ─────────────────────────────────────────────
-FROM node:22-slim
+FROM node:26-slim
 
 # Install git (needed to clone) and pm2 globally
 RUN apt-get update && apt-get install -y --no-install-recommends git bash ca-certificates curl \
