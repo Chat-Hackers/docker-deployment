@@ -7,6 +7,7 @@ services:
         VITE_BASE_URL: ${VITE_BASE_URL}
     volumes:
       - ./secrets:/apps/chathackers-wrapper/registrations:ro
+      - duckdb-data:/data
 
     # Container name makes it easier to find in `docker ps`
     container_name: chathackers_uk
