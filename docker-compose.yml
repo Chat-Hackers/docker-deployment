@@ -1,5 +1,7 @@
 services:
   apps:
+    environment:
+      - DUCKDB_DATA_DIR=/data
     build:
       context: .
       dockerfile: Dockerfile
@@ -42,3 +44,6 @@ services:
 networks:
   traefik:
     external: true
+
+volumes:
+  duckdb-data:
