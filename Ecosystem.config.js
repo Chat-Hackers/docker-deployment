@@ -34,8 +34,8 @@ module.exports = {
       kill_timeout: 5000
     },
     {
-      name: "example-tool",
-      cwd: "/apps/example-tool",
+      name: "events-tool",
+      cwd: "/apps/events-tool",
       script: "npm",
       args: "start",
       env: {
@@ -48,8 +48,8 @@ module.exports = {
       kill_timeout: 5000
     },
     {
-      name: "rainbow-tool",
-      cwd: "/apps/rainbow-tool",
+      name: "publish-tool",
+      cwd: "/apps/publish-tool",
       script: "npm",
       args: "start",
       env: {
