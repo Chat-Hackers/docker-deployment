@@ -13,26 +13,24 @@ WORKDIR /apps
 ARG VITE_BASE_URL
 ENV VITE_BASE_URL=$VITE_BASE_URL
 
-# ── Clone your repositories ──────────────────
-# Replace the URLs and folder names to match your repos.
-# For private repos via SSH, see the SSH note at the bottom of this file.
+# ── Clone repositories ──────────────────
 
-RUN git clone https://github.com/King-Mob/chathackers-wrapper.git chathackers-wrapper
-RUN git clone https://github.com/King-Mob/welcome-tool.git welcome-tool
-RUN git clone https://github.com/King-Mob/example-chathackers-module.git example-tool
-RUN git clone https://github.com/King-Mob/rainbows-chathackers-tool.git rainbow-tool
+RUN git clone https://github.com/Chat-Hackers/tool-hub.git tool-hub
+RUN git clone https://github.com/Chat-Hackers/welcome-tool.git welcome-tool
+RUN git clone https://github.com/Chat-Hackers/events-tool.git events-tool
+RUN git clone https://github.com/Chat-Hackers/publish-tool.git publish-tool
 
 # ── Install dependencies for each repo ───────
-RUN cd chathackers-wrapper && npm ci
+RUN cd tool-hub && npm ci
 RUN cd welcome-tool && npm ci
-RUN cd example-tool && npm ci
-RUN cd rainbow-tool && npm ci
+RUN cd events-tool && npm ci
+RUN cd publish-tool && npm ci
 
 # ── Build web and service for each repo ───────
-RUN cd chathackers-wrapper && npm run build-web && npm run build
+RUN cd tool-hub && npm run build-web && npm run build
 RUN cd welcome-tool && npm run build-web && npm run build
-RUN cd example-tool && npm run build-web && npm run build
-RUN cd rainbow-tool && npm run build-web && npm run build
+RUN cd events-tool && npm run build-web && npm run build
+RUN cd publish-tool && npm run build-web && npm run build
 
 # ── Copy the pm2 ecosystem config ────────────
 COPY ecosystem.config.js .

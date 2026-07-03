@@ -6,7 +6,7 @@ services:
       args:
         VITE_BASE_URL: ${VITE_BASE_URL}
     volumes:
-      - ./secrets:/apps/chathackers-wrapper/registrations:ro
+      - ./secrets:/apps/tool-hub/registrations:ro
       - duckdb-data:/data
 
     # Container name makes it easier to find in `docker ps`
@@ -22,7 +22,7 @@ services:
       # Which Docker network Traefik should use to reach this container
       - "traefik.docker.network=traefik"
 
-      # ── chathackers-wrapper ──────────────────────────────────────────────────
+      # ── tool-hub ──────────────────────────────────────────────────
       # Router: matches requests for chathackers.uk
       - "traefik.http.routers.chathackers_uk.rule=Host(`chathackers.uk`)"
       - "traefik.http.routers.chathackers_uk.entrypoints=web-secure"

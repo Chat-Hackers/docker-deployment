@@ -5,8 +5,8 @@
 module.exports = {
   apps: [
     {
-      name: "chathackers-wrapper",
-      cwd: "/apps/chathackers-wrapper",
+      name: "tool-hub",
+      cwd: "/apps/tool-hub",
       script: "npm",
       args: "start",           // change to "run serve" etc. if needed
       env: {
