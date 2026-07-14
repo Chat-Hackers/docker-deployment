@@ -21,7 +21,7 @@ module.exports = {
     {
       name: "welcome-tool",
       cwd: "/apps/welcome-tool",
-      script: "dist/src/index.js",
+      script: "dist/index.js",
       env: {
         NODE_ENV: "production",
         PORT: 8136,
