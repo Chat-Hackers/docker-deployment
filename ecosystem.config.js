@@ -7,8 +7,7 @@ module.exports = {
     {
       name: "tool-hub",
       cwd: "/apps/tool-hub",
-      script: "npm",
-      args: "start",           // change to "run serve" etc. if needed
+      script: "dist/src/index.js",
       env: {
         NODE_ENV: "production",
         PORT: 8135,
@@ -22,8 +21,7 @@ module.exports = {
     {
       name: "welcome-tool",
       cwd: "/apps/welcome-tool",
-      script: "npm",
-      args: "start",
+      script: "dist/src/index.js",
       env: {
         NODE_ENV: "production",
         PORT: 8136,
@@ -36,8 +34,7 @@ module.exports = {
     {
       name: "events-tool",
       cwd: "/apps/events-tool",
-      script: "npm",
-      args: "start",
+      script: "dist/src/index.js",
       env: {
         NODE_ENV: "production",
         PORT: 8137,
@@ -50,8 +47,7 @@ module.exports = {
     {
       name: "publish-tool",
       cwd: "/apps/publish-tool",
-      script: "npm",
-      args: "start",
+      script: "dist/src/index.js",
       env: {
         NODE_ENV: "production",
         PORT: 8138,
