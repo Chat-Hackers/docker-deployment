@@ -19,6 +19,9 @@ ENV VITE_AUTH_LINK=$VITE_AUTH_LINK
 ARG VITE_WRAPPER_URL
 ENV VITE_WRAPPER_URL=$VITE_WRAPPER_URL
 
+ARG VITE_TRELLO_KEY
+ENV VITE_TRELLO_KEY=$VITE_TRELLO_KEY
+
 # ── Clone repositories ──────────────────
 
 RUN git clone https://github.com/Chat-Hackers/tool-hub.git tool-hub
