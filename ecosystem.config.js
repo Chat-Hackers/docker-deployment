@@ -57,5 +57,18 @@ module.exports = {
       restart_delay: 3000,
       kill_timeout: 5000
     },
+    {
+      name: "trello-tool",
+      cwd: "/apps/trello-tool",
+      script: "dist/src/index.js",
+      env: {
+        NODE_ENV: "production",
+        PORT: 8138,
+      },
+      autorestart: true,
+      max_restarts: 5,
+      restart_delay: 3000,
+      kill_timeout: 5000
+    },
   ],
 };
