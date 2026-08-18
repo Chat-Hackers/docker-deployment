@@ -6,9 +6,8 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        VITE_BASE_URL: ${VITE_BASE_URL}
-        VITE_AUTH_LINK: ${VITE_AUTH_LINK}
-        VITE_WRAPPER_URL: ${VITE_WRAPPER_URL}
+        VITE_HUB_URL: ${VITE_BASE_URL}
+        VITE_TRELLO_AUTH_LINK: ${VITE_TRELLO_AUTH_LINK}
         VITE_TRELLO_KEY: ${VITE_TRELLO_KEY}
     volumes:
       - ./secrets:/apps/tool-hub/registrations:ro
