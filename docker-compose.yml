@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        VITE_HUB_URL: ${VITE_BASE_URL}
+        VITE_HUB_URL: ${VITE_HUB_URL}
         VITE_TRELLO_AUTH_LINK: ${VITE_TRELLO_AUTH_LINK}
         VITE_TRELLO_KEY: ${VITE_TRELLO_KEY}
     volumes:
@@ -28,7 +28,7 @@ services:
 
       # ── tool-hub ──────────────────────────────────────────────────
       # Router: matches requests for chathackers.uk
-      - "traefik.http.routers.chathackers_uk.rule=Host(`${DASHBOARD_URL}`)"
+      - "traefik.http.routers.chathackers_uk.rule=Host(`${dashboard_url}`)"
       - "traefik.http.routers.chathackers_uk.entrypoints=web-secure"
       - "traefik.http.routers.chathackers_uk.tls.certresolver=default"
       # Service: tells Traefik which port to forward to
