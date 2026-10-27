@@ -109,5 +109,17 @@ module.exports = {
       restart_delay: 3000,
       kill_timeout: 5000
     },
+    {
+      name: "schedule-tool",
+      cwd: "/apps/schedule-tool",
+      script: "dist/src/index.js",
+      env: {
+        DUCKDB_DATA_DIR: "/data",
+      },
+      autorestart: true,
+      max_restarts: 5,
+      restart_delay: 3000,
+      kill_timeout: 5000
+    }
   ],
 };
