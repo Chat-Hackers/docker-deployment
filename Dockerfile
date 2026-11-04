@@ -30,6 +30,7 @@ RUN git clone https://github.com/Chat-Hackers/voice-tool.git voice-tool
 RUN git clone https://github.com/Chat-Hackers/emails-tool.git emails-tool
 RUN git clone https://github.com/Chat-Hackers/spacetube-tool.git spacetube-tool
 RUN git clone https://github.com/Chat-Hackers/schedule-tool.git schedule-tool
+RUN git clone https://github.com/Chat-Hackers/bouncer-tool.git bouncer-tool
 
 # ── Install dependencies for each repo ───────
 RUN cd tool-hub && npm ci
@@ -41,6 +42,7 @@ RUN cd voice-tool && npm ci
 RUN cd emails-tool && npm ci
 RUN cd spacetube-tool && npm ci
 RUN cd schedule-tool && npm ci
+RUN cd bouncer-tool && npm ci
 
 # ── Build web and service for each repo ───────
 RUN cd tool-hub && npm run build-web && npm run build
@@ -52,6 +54,7 @@ RUN cd voice-tool && npm run build-web && npm run build
 RUN cd emails-tool && npm run build-web && npm run build
 RUN cd spacetube-tool && npm run build-web && npm run build
 RUN cd schedule-tool && npm run build-web && npm run build
+RUN cd bouncer-tool && npm run build-web && npm run build
 
 # ── Copy the pm2 ecosystem config ────────────
 COPY ecosystem.config.js .

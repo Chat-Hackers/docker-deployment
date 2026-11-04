@@ -120,6 +120,18 @@ module.exports = {
       max_restarts: 5,
       restart_delay: 3000,
       kill_timeout: 5000
+    },
+    {
+      name: "bouncer-tool",
+      cwd: "/apps/bouncer-tool",
+      script: "dist/src/index.js",
+      env: {
+        DUCKDB_DATA_DIR: "/data",
+      },
+      autorestart: true,
+      max_restarts: 5,
+      restart_delay: 3000,
+      kill_timeout: 5000
     }
   ],
 };
